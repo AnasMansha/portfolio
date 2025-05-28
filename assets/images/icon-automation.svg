@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg width="800px" height="800px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="gradient1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFDB6E" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#FFDB6E" stop-opacity="0.15"/>
-    </linearGradient>
-    <linearGradient id="gradient2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFDB6E"/>
-      <stop offset="100%" stop-color="#FFDB6E"/>
+    <radialGradient id="gradient1" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.5" />
+      <stop offset="60%" stop-color="#FFC107" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FFB300" stop-opacity="0.15" />
+    </radialGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9C4"/>
+      <stop offset="50%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFC107"/>
     </linearGradient>
   </defs>
   <path d="M12,19.77a11.13,11.13,0,0,0-2.26.94L10,25.24,5.44,25a11.13,11.13,0,0,0-.94,2.26l3.37,3.05-3.37,3a10.68,10.68,0,0,0,.94,2.26L10,35.39l-.23,4.54a11.09,11.09,0,0,0,2.26.93l3.05-3.37,3,3.37a10.64,10.64,0,0,0,2.26-.93l-.23-4.54,4.54.23a10.64,10.64,0,0,0,.93-2.26l-3.37-3,3.37-3.05A11.09,11.09,0,0,0,24.66,25l-4.54.23.23-4.53a10.68,10.68,0,0,0-2.26-.94l-3,3.37Z" fill="url(#gradient1)" stroke="#FFDB6E" stroke-width="1"/>
