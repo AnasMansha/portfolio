@@ -2035,3 +2035,18 @@ textarea.form-input::-webkit-resizer {
     max-width: 700px;
   }
 }
+
+.chat-layout
+{
+  margin: 0px;
+  border-radius: 20px;
+}
+.chat-window
+{
+  border:0px !important;
+}
+.chat-layout
+{
+  backdrop-filter:blur(10px);
+  border: solid 2px orangered;
+}
