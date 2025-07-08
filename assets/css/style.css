@@ -162,7 +162,6 @@ textarea {
 
 html {
   font-family: var(--ff-poppins);
-  touch-action: none;
 }
 
 body {
