@@ -162,6 +162,7 @@ textarea {
 
 html {
   font-family: var(--ff-poppins);
+  touch-action: none;
 }
 
 body {
@@ -175,6 +176,7 @@ body {
 .sidebar,
 article {
   background: var(--eerie-black-2);
+  opacity: 90%;
   border: 1px solid var(--jet);
   border-radius: 20px;
   padding: 15px;
@@ -2049,4 +2051,15 @@ textarea.form-input::-webkit-resizer {
 {
   backdrop-filter:blur(10px);
   border: solid 2px orangered;
+}
+
+.dragon-svg {
+	position: fixed;
+  top:0;
+  left:0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	filter: sepia(20%);
+  z-index: -999;
 }
