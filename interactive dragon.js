@@ -6,16 +6,6 @@ const xlinkns = "http://www.w3.org/1999/xlink";
 
 let isClicked = false;
 
-// window.addEventListener("mousedown", (e) => {
-// 	pointer.x = e.clientX;
-// 	pointer.y = e.clientY;
-// 	rad = 0;
-// 	isClicked = true; // Slow down on click
-// 	setTimeout(() => {
-// 		isClicked = false; // Resume normal speed after 3 seconds
-// 	}, 3000);
-// });
-
 const resize = () => {
 	width = window.innerWidth;
 	height = window.innerHeight;
@@ -36,8 +26,10 @@ const N = 40;
 const elems = [];
 for (let i = 0; i < N; i++) elems[i] = { use: null, x: width / 2, y: 0 };
 
-const pointer = { x: width / 2, y: height / 2 };
-const radm = Math.min(pointer.x, pointer.y) - 20;
+const pointer = { x: width / 1.5, y: height / 1.5 };
+const smoothedPointer = { x: pointer.x, y: pointer.y };
+
+const radm = Math.min(pointer.x, pointer.y);
 let frm = Math.random();
 let rad = 0;
 
@@ -52,26 +44,38 @@ const run = () => {
 
 	let speedFactor = isClicked ? 0.3 : 1;
 
-	let e = elems[0];
-	const ax = (Math.cos(3 * frm) * rad * width) / height;
-	const ay = (Math.sin(4 * frm) * rad * height) / width;
-	e.x += ((ax + pointer.x - e.x) / 10) * speedFactor;
-	e.y += ((ay + pointer.y - e.y) / 10) * speedFactor;
+	// Calculate target position using smooth sinusoidal motion
+	const ax = (Math.cos(2 * frm) * rad * width) / height;
+	const ay = (Math.sin(2 * frm) * rad * height) / width;
 
+	pointer.x = width / 2 + ax;
+	pointer.y = height / 2 + ay;
+
+	// Smooth the pointer movement
+	smoothedPointer.x += (pointer.x - smoothedPointer.x) * 0.05;
+	smoothedPointer.y += (pointer.y - smoothedPointer.y) * 0.05;
+
+	// Head (first segment)
+	let e = elems[0];
+	e.x += ((smoothedPointer.x - e.x) / 10) * speedFactor;
+	e.y += ((smoothedPointer.y - e.y) / 10) * speedFactor;
+
+	// Tail segments
 	for (let i = 1; i < N; i++) {
 		let e = elems[i];
 		let ep = elems[i - 1];
 		const a = Math.atan2(e.y - ep.y, e.x - ep.x);
-		e.x += ((ep.x - e.x + (Math.cos(a) * (100 - i)) / 5) / 4) * speedFactor;
-		e.y += ((ep.y - e.y + (Math.sin(a) * (100 - i)) / 5) / 4) * speedFactor;
+
+		// Smooth follow with spring-like motion
+		e.x += ((ep.x - e.x + Math.cos(a) * (100 - i) / 5) / 4) * speedFactor;
+		e.y += ((ep.y - e.y + Math.sin(a) * (100 - i) / 5) / 4) * speedFactor;
 
 		const s = (162 + 4 * (1 - i)) / 50;
+
 		e.use.setAttributeNS(
 			null,
 			"transform",
-			`translate(${(ep.x + e.x) / 2},${(ep.y + e.y) / 2}) rotate(${
-				(180 / Math.PI) * a
-			}) scale(${s},${s})`
+			`translate(${(ep.x + e.x) / 2},${(ep.y + e.y) / 2}) rotate(${(180 / Math.PI) * a}) scale(${s},${s})`
 		);
 	}
 
