@@ -20,7 +20,7 @@ export const aboutText = [
    experience building scalable backend systems, full-stack web applications, and AI-powered
    automation. I work primarily with TypeScript, Python, NestJS, Next.js, PostgreSQL,
    Supabase, and Redis.`,
-  `My focus is backend architecture and REST API development — designing secure, maintainable
+  `My focus is backend architecture and REST API development: designing secure, maintainable
    services, database models, and real-time data workflows that hold up in production. I also
    build AI automation solutions, collaborating directly with international clients from
    planning through delivery, and enjoy turning complex problems into efficient, intuitive
@@ -71,18 +71,18 @@ export const experience = [
     role: "Software Engineer (Backend / Full Stack)",
     company: "Texagon",
     companyUrl: "https://www.linkedin.com/company/texagondev/",
-    period: "Feb 2025 — Present",
+    period: "Feb 2025 - Present",
     text: `Engineering backend and full-stack applications with NestJS, Next.js, TypeScript,
            PostgreSQL, Supabase, and Redis for production business platforms. I design secure
            REST APIs, authentication systems, database models, and real-time data workflows,
-           and lead development of AI-powered customer service automation — collaborating
+           and lead development of AI-powered customer service automation, collaborating
            directly with international clients from requirements through delivery.`,
   },
   {
     role: "Software Engineer",
     company: "Magnetar Solutions",
     companyUrl: "https://www.linkedin.com/company/magnetarsolutions/",
-    period: "Mar 2024 — Dec 2024",
+    period: "Mar 2024 - Dec 2024",
     text: `Developed responsive web applications using React.js, Material UI, and Formik, and
            improved application architecture through refactoring and modular design. Built
            Python automation tools for data collection, processing, and pipeline optimization,
@@ -92,10 +92,10 @@ export const experience = [
     role: "Associate Software Engineer",
     company: "Educative, Inc.",
     companyUrl: "https://www.linkedin.com/company/educative-inc/",
-    period: "Jul 2023 — Feb 2024",
+    period: "Jul 2023 - Feb 2024",
     text: `Developed and maintained production features for a large-scale educational platform
            using React.js, JavaScript, Tailwind CSS, and Redis. Worked within a large shared
-           codebase — participating in code reviews, debugging, and building reusable frontend
+           codebase, participating in code reviews, debugging, and building reusable frontend
            components that improved maintainability and consistency.`,
   },
   {
@@ -103,7 +103,7 @@ export const experience = [
     company: "Information Technology University",
     companyUrl:
       "https://www.linkedin.com/school/information-technology-university/",
-    period: "Mar 2022 — Jan 2023",
+    period: "Mar 2022 - Jan 2023",
     text: `Conducted programming tutorials, mentored students in algorithms and software
            development, and assisted faculty with coursework, grading, and feedback.`,
   },
@@ -112,26 +112,26 @@ export const experience = [
 export const education = [
   {
     school: "Information Technology University",
-    period: "2019 — 2023",
+    period: "2019 - 2023",
     text: "BS in Computer Science",
   },
   {
     school: "Punjab College",
-    period: "2017 — 2019",
+    period: "2017 - 2019",
     text: "FSc Pre-Engineering",
   },
   {
     school: "Garrison Academy",
-    period: "2015 — 2017",
+    period: "2015 - 2017",
     text: "Matriculation",
   },
 ];
 
 export const achievements = [
-  "1st Place — Programming Competition, Superior Technical Symposium",
-  "1st Place — Taakra Speed Coding Competition, PUCIT",
-  "1st Place — Speed Programming Competition (two-time winner), University of Lahore",
-  "2nd Place — Code Rush Programming Competition, Information Technology University",
+  "1st Place - Programming Competition, Superior Technical Symposium",
+  "1st Place - Taakra Speed Coding Competition, PUCIT",
+  "1st Place - Speed Programming Competition (two-time winner), University of Lahore",
+  "2nd Place - Code Rush Programming Competition, Information Technology University",
   "Selected for STEM NPTC-18 Training Program at Pakistan Institute of Engineering and Applied Sciences (PIEAS)",
   "Recipient of multiple awards in regional mathematics competitions",
 ];
